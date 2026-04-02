@@ -48,19 +48,6 @@ docker run \
 - The pod needs `NET_ADMIN` and access to `/dev/net/tun`.
 - If you run many replicas, spread them across different VPN endpoints if you actually need egress diversity. Multiple replicas against the same VPN endpoint still share the same outward IP.
 
-## Lumine integration
-
-`lumine/production` now supports:
-
-- `PRODUCTION_UPSTREAM_SOCKS5_ENDPOINTS`
-- `PRODUCTION_UPSTREAM_SOCKS5_PROXY_LIST_URLS`
-- `PRODUCTION_UPSTREAM_SOCKS5_USERNAME`
-- `PRODUCTION_UPSTREAM_SOCKS5_PASSWORD`
-- `PRODUCTION_UPSTREAM_SOCKS5_DIAL_TIMEOUT`
-- `PRODUCTION_UPSTREAM_ROUTE_SELECTOR_JSON`
-
-If endpoint lists are configured and no explicit route-selector JSON is provided, Lumine routes all `raknet` upstream dials through SOCKS5 automatically.
-
 ## VPN Gate caveat
 
 VPN Gate is fine for experimentation, but it is a volunteer/academic network, not a production-grade commercial backbone. The official site lists OpenVPN as a supported protocol and the anti-abuse policy says connection logs are retained and disclosures can occur for abuse/legal requests:
