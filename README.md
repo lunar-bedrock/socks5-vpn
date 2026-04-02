@@ -10,7 +10,7 @@ The intended flow is:
 
 ## Why this exists
 
-It is difficult to find third-party SOCKS5 providers with reliable UDP ASSOCIATE support. Running our own SOCKS5 server inside a VPN-connected container keeps the proxy surface simple and lets Lumine reuse its existing upstream SOCKS5 support.
+It is difficult to find third-party SOCKS5 providers with reliable UDP ASSOCIATE support. Running our own SOCKS5 server inside a VPN-connected container keeps the proxy surface simple and lets us reuse its existing upstream SOCKS5 support.
 
 ## Environment
 
