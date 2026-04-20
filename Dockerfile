@@ -9,7 +9,7 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o /out/socks5-vpn ./
 
 FROM alpine:3.21
 
-RUN apk add --no-cache ca-certificates dumb-init iproute2 openvpn
+RUN apk add --no-cache ca-certificates dumb-init iproute2 iptables openvpn
 
 COPY --from=build /out/socks5-vpn /usr/local/bin/socks5-vpn
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
