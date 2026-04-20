@@ -1,10 +1,14 @@
-module github.com/lunar-bedrock/mobile-server/socks5-vpn
+module github.com/lunar-bedrock/socks5-vpn
 
 go 1.25.1
 
-require github.com/txthinking/socks5 v0.0.0-20230325130024-4230056ae301
+require (
+	github.com/txthinking/socks5 v0.0.0-20230325130024-4230056ae301
+	golang.org/x/crypto v0.37.0
+)
 
 require (
 	github.com/patrickmn/go-cache v2.1.0+incompatible // indirect
 	github.com/txthinking/runnergroup v0.0.0-20210608031112-152c7c4432bf // indirect
+	golang.org/x/sys v0.32.0 // indirect
 )
