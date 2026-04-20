@@ -6,7 +6,7 @@ The intended flow is:
 
 1. OpenVPN brings up `tun0` from a mounted `.ovpn` config.
 2. The Go process starts a SOCKS5 server on `:1080` for both TCP and UDP.
-3. Lumine production points its upstream RakNet dialer at one or more of these endpoints.
+3. Consumers point their upstream RakNet dialer at one or more of these endpoints.
 
 ## Why this exists
 
